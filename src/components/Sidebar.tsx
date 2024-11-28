@@ -1,4 +1,4 @@
-import { Home, FileText, AlertTriangle, DollarSign } from "lucide-react"
+import { Grid, Layers, List, Calendar } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -11,23 +11,23 @@ import {
 
 const items = [
   {
-    title: "Overview",
-    icon: Home,
+    title: "Projects",
+    icon: Grid,
     url: "#",
   },
   {
-    title: "Documents",
-    icon: FileText,
+    title: "Breakdown structure",
+    icon: Layers,
     url: "#",
   },
   {
-    title: "Risks",
-    icon: AlertTriangle,
+    title: "Themes",
+    icon: List,
     url: "#",
   },
   {
-    title: "Cost",
-    icon: DollarSign,
+    title: "Timeline",
+    icon: Calendar,
     url: "#",
   },
 ]
@@ -42,9 +42,9 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url} className="flex items-center gap-3">
+                    <a href={item.url} className="flex flex-col items-center gap-2 p-2">
                       <item.icon className="h-5 w-5" />
-                      <span>{item.title}</span>
+                      <span className="text-xs text-center">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
