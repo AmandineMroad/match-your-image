@@ -18,7 +18,7 @@ const items = [
   {
     title: "Breakdown structure",
     icon: Layers,
-    url: "#",
+    url: "/breakdown-structure",
   },
   {
     title: "Themes",
